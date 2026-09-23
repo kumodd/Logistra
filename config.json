@@ -1,0 +1,215 @@
+{
+  "brand": {
+    "name": "Logistra",
+    "tagline": "Fulfilment infrastructure for growing brands.",
+    "description": "End-to-end e-commerce fulfilment for teams ready to move inventory out of the founder's hands.",
+    "location": "Patna · Bihar · India",
+    "email": "hello@logistra.in",
+    "phone": "+91 00000 00000"
+  },
+  "navigation": [
+    { "label": "How it works", "href": "/how-it-works" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Technology", "href": "/technology" },
+    { "label": "About", "href": "/about" }
+  ],
+  "home": {
+    "eyebrow": "Built for the next stage",
+    "hero": {
+      "line1": "The work behind",
+      "line2": "every",
+      "emphasis": "order,",
+      "line3": "handled."
+    },
+    "title": "The work behind every order, handled.",
+    "body": "From inventory receiving to final dispatch—and everything in between. Logistra runs the physical and digital fulfilment workflow so your team can focus on building the business.",
+    "audience": "For D2C brands · marketplace sellers · regional businesses going online",
+    "workflowIntro": {
+      "eyebrow": "One connected operation",
+      "title": "From first scan to final mile.",
+      "body": "Fulfilment is more than a box leaving a warehouse. It is a chain of small, important decisions. We keep the whole chain moving."
+    },
+    "outcome": {
+      "eyebrow": "A little more headspace",
+      "title": "Keep building the brand.",
+      "emphasis": "We’ll handle the boxes.",
+      "body": "Logistra gives growing businesses the processes, people and visibility to make fulfilment feel like a strength—not the thing that slows them down.",
+      "link": "Explore our services"
+    },
+    "audienceIntro": {
+      "eyebrow": "Built for the next stage",
+      "title": "Not too much. Not too little. Just right for where you are.",
+      "body": "You do not need an enterprise machine. You need an operation that understands your volume, your customers and your ambition."
+    },
+    "proofIntro": {
+      "eyebrow": "Why Logistra",
+      "title": "Professional systems.",
+      "emphasis": "Human partnership."
+    },
+    "process": ["Receive", "Store", "Pick", "Pack", "Ship", "Return"],
+    "metrics": [
+      { "value": "500–5k", "label": "orders / month" },
+      { "value": "1", "label": "connected workflow" },
+      { "value": "24/7", "label": "operational visibility" }
+    ],
+    "audiences": [
+      {
+        "number": "01",
+        "title": "Growing D2C brands",
+        "body": "Stop spending evenings on stock counts and packing slips. Keep your attention on the brand."
+      },
+      {
+        "number": "02",
+        "title": "Marketplace sellers",
+        "body": "Bring orders from every channel into one calm, consistent fulfilment operation."
+      },
+      {
+        "number": "03",
+        "title": "Regional businesses going online",
+        "body": "Take an established business online without building a warehouse operation from scratch."
+      }
+    ]
+  },
+  "workflow": [
+    {
+      "number": "01",
+      "title": "Receive",
+      "short": "Your inventory comes to us.",
+      "body": "Every inbound shipment is counted, scanned and checked before it enters the system.",
+      "details": ["Shipment appointment", "Quantity verification", "SKU / barcode scan", "Damage inspection"]
+    },
+    {
+      "number": "02",
+      "title": "Store",
+      "short": "Every SKU has a place.",
+      "body": "Inventory is assigned a defined location, making stock easier to find and harder to lose.",
+      "details": ["Location tracking", "Stock status", "Cycle counts", "Low-stock visibility"]
+    },
+    {
+      "number": "03",
+      "title": "Synchronise",
+      "short": "Your orders come to us.",
+      "body": "Orders from the channels you already use flow into one fulfilment queue.",
+      "details": ["Shopify", "Amazon", "Flipkart", "ONDC", "API / CSV"]
+    },
+    {
+      "number": "04",
+      "title": "Pick & pack",
+      "short": "Every order follows a controlled process.",
+      "body": "Reserve, pick, verify, pack, weigh and label—each order moves through the same considered sequence.",
+      "details": ["Stock reserved", "Barcode verification", "Quality check", "Label generation"]
+    },
+    {
+      "number": "05",
+      "title": "Ship",
+      "short": "Packed, labelled and ready.",
+      "body": "Shipments are created, manifested and handed over with tracking and exception visibility.",
+      "details": ["Courier allocation", "Manifest generation", "Courier handover", "Exception monitoring"]
+    },
+    {
+      "number": "06",
+      "title": "Return",
+      "short": "The workflow continues when orders come back.",
+      "body": "Returns and RTOs are inspected, classified and routed back into inventory—not left as a pile of exceptions.",
+      "details": ["Inspect & classify", "Restock or repack", "Quarantine damaged units", "Update inventory"]
+    }
+  ],
+  "services": [
+    { "number": "01", "name": "Inbound receiving", "description": "Receive, count, scan and verify inventory as it enters the operation." },
+    { "number": "02", "name": "Storage", "description": "Organised SKU-level storage with location tracking and clear inventory states." },
+    { "number": "03", "name": "Pick & pack", "description": "Barcode-assisted picking, verification and professional packing for every order." },
+    { "number": "04", "name": "Dispatch", "description": "Courier handover, manifests, shipment tracking and exception monitoring." },
+    { "number": "05", "name": "Returns & RTO", "description": "Inspection, classification, restocking and quarantine built into the workflow." },
+    { "number": "06", "name": "COD reconciliation", "description": "Shipment-level remittance tracking and exception management." },
+    { "number": "07", "name": "Kitting & value-add", "description": "Bundling, relabelling, inserts, quality checks and custom packaging." }
+  ],
+  "integrations": {
+    "available": ["Shopify", "Amazon", "Flipkart", "ONDC", "API", "CSV"],
+    "planned": ["WooCommerce", "Custom storefronts"]
+  },
+  "why": [
+    { "title": "Accurate inventory", "body": "Controlled, SKU-level operations from receiving to return." },
+    { "title": "Transparent operations", "body": "See orders, inventory, fulfilment and returns in one view." },
+    { "title": "Built for growing teams", "body": "Professional systems for businesses that are not ready for enterprise complexity." },
+    { "title": "Returns under control", "body": "Reverse logistics is part of the workflow, not an afterthought." }
+  ],
+  "onboarding": [
+    { "number": "01", "title": "Tell us about your business", "body": "Share your order volume, SKUs, channels and current fulfilment setup." },
+    { "number": "02", "title": "We understand the operation", "body": "We look at your products, packaging, storage and returns profile." },
+    { "number": "03", "title": "Inventory moves to Logistra", "body": "We receive, verify, locate and add your inventory to the system." },
+    { "number": "04", "title": "Connect your channels", "body": "Your orders begin flowing into one connected fulfilment workflow." },
+    { "number": "05", "title": "We fulfil", "body": "Pick → verify → pack → ship. A consistent process for every order." },
+    { "number": "06", "title": "You monitor", "body": "Stay close to inventory, orders, returns, RTO and performance." }
+  ],
+  "pages": {
+    "howItWorks": {
+      "eyebrow": "How it works",
+      "title": "A calmer way to move every order.",
+      "body": "A controlled fulfilment workflow, from the first inbound scan to the moment a return finds its way back into sellable stock.",
+      "returnEyebrow": "Reverse logistics",
+      "returnTitle": "When an order comes back, the work continues.",
+      "returnBody": "Returned shipments are inspected, classified and routed to the right next step—restock, repack, quarantine or investigation."
+    },
+    "services": {
+      "eyebrow": "Services",
+      "title": "Everything your order needs between click and customer.",
+      "body": "A hands-on fulfilment operation for the moments that matter: getting stock right, getting orders out, and keeping returns from becoming a blind spot.",
+      "introEyebrow": "What we handle",
+      "introTitle": "A practical operation, end to end.",
+      "introBody": "Choose the pieces you need today. Build from there as your business grows.",
+      "introLink": "Discuss your requirements",
+      "valueEyebrow": "What good looks like",
+      "valueTitle": "Fewer loose ends.",
+      "valueEmphasis": "More useful time.",
+      "valuePoints": [
+        { "title": "Operations you can explain", "body": "Clear steps, defined owners and fewer “where is that order?” moments." },
+        { "title": "Stock you can trust", "body": "Inventory states are visible from available to returned and quarantined." },
+        { "title": "Returns with a next step", "body": "Every returned unit is inspected and routed back into the workflow." }
+      ]
+    },
+    "technology": {
+      "eyebrow": "Technology",
+      "title": "The operation, with nothing hidden.",
+      "body": "Technology at Logistra has one job: make the physical work more reliable, visible and easier to act on.",
+      "platformEyebrow": "The Logistra platform",
+      "platformTitle": "One view of the work behind the order.",
+      "platformBody": "Orders, inventory, picking, shipping, returns and RTO are connected to the operation—not floating separately from it.",
+      "platformLink": "Ask us what’s possible",
+      "integrationEyebrow": "Integrations",
+      "integrationTitle": "Connected to the channels you already use.",
+      "integrationBody": "Orders from multiple channels should not create multiple versions of the truth. Bring them into one workflow.",
+      "futureEyebrow": "A considered roadmap",
+      "futureTitle": "Useful data, when it is ready.",
+      "futureBody": "We are interested in what the data can make better—demand forecasts, RTO prediction, smarter slotting and clearer profitability. These are planned capabilities, not claims about today."
+    },
+    "about": {
+      "eyebrow": "About Logistra",
+      "title": "Built around the realities of growing brands.",
+      "body": "Logistra exists for the point where fulfilment has become too important to improvise, but too personal to hand to a faceless machine.",
+      "statementTitle": "Big enough to run professionally.",
+      "statementEmphasis": "Small enough to work closely.",
+      "statementBody": "We believe the best fulfilment partner is not the one with the loudest claims. It is the one that knows where your inventory is, what your customer needs, and what should happen next.",
+      "principlesEyebrow": "How we work",
+      "principlesTitle": "The principles behind the process.",
+      "principlesBody": "A reliable operation is a business advantage. We treat it that way.",
+      "principles": [
+        { "number": "01", "title": "Stay close to the work", "body": "Good fulfilment is built on what happens on the floor. We keep the process concrete, visible and connected to the people doing it." },
+        { "number": "02", "title": "Make the next step clear", "body": "Every order, unit and return should have an obvious status and an obvious next move." },
+        { "number": "03", "title": "Grow at the right pace", "body": "We are here for the businesses moving from founder-led fulfilment to a repeatable operation." }
+      ],
+      "originEyebrow": "Rooted in the region",
+      "originTitle": "Built from Bihar.",
+      "originEmphasis": "Open to what’s next.",
+      "originBody": "Logistra understands the ambition of businesses that are growing out of regional markets and reaching customers across India. We bring operational discipline without losing that closeness.",
+      "originLink": "Start a conversation"
+    }
+  },
+  "contact": {
+    "eyebrow": "Start with a conversation",
+    "title": "Let’s see if Logistra fits your operation.",
+    "body": "Tell us a little about your business. We’ll come back with the right questions, not a generic pitch.",
+    "orderRanges": ["Under 500", "500–2,000", "2,000–5,000", "5,000+"],
+    "channels": ["Shopify", "Amazon", "Flipkart", "ONDC", "Multiple channels", "Other"],
+    "categories": ["Apparel & accessories", "Beauty & personal care", "Home & lifestyle", "Food & consumables", "Other"]
+  }
+}
