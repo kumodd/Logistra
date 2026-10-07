@@ -1,15 +1,20 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { useEffect, useState } from "react";
 import config from "@/config.json";
 import { CheckIcon } from "./icons";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitted(true);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("submitted") === "1") setSubmitted(true);
+  }, []);
+
+  function resetForm() {
+    window.history.replaceState({}, "", window.location.pathname);
+    setSubmitted(false);
   }
 
   if (submitted) {
@@ -19,13 +24,16 @@ export default function ContactForm() {
         <span className="eyebrow">Message received</span>
         <h3>We’ll be in touch shortly.</h3>
         <p>Thanks for sharing a little about your operation. A member of the Logistra team will follow up with the right next step.</p>
-        <button className="text-link" onClick={() => setSubmitted(false)}>Send another enquiry</button>
+        <button className="text-link" onClick={resetForm}>Send another enquiry</button>
       </div>
     );
   }
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" action={config.contact.formSubmit.endpoint} method="POST">
+      <input type="hidden" name="_next" value={config.contact.formSubmit.successUrl} />
+      <input type="hidden" name="_subject" value={config.contact.formSubmit.subject} />
+      <input type="hidden" name="_template" value={config.contact.formSubmit.template} />
       <div className="form-row">
         <label>Full name <input name="name" required placeholder="Your name" /></label>
         <label>Business name <input name="business" required placeholder="Your business" /></label>

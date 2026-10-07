@@ -21,6 +21,7 @@ export default function Footer() {
           <div>
             <span className="footer-label">Start here</span>
             <Link href="/contact">Talk to a fulfilment expert <ArrowUpRight size={14} /></Link>
+            <a href={`tel:+91${config.brand.phone}`}>Direct call: {config.brand.phone}</a>
             <a href={`mailto:${config.brand.email}`}>{config.brand.email}</a>
           </div>
         </div>

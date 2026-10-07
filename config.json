@@ -4,8 +4,8 @@
     "tagline": "Fulfilment infrastructure for growing brands.",
     "description": "End-to-end e-commerce fulfilment for teams ready to move inventory out of the founder's hands.",
     "location": "Patna · Bihar · India",
-    "email": "hello@logistra.in",
-    "phone": "+91 00000 00000"
+    "email": "partner@logistra.in",
+    "phone": "9135086955"
   },
   "navigation": [
     { "label": "How it works", "href": "/how-it-works" },
@@ -287,6 +287,12 @@
     "eyebrow": "Start with a conversation",
     "title": "Let’s see if Logistra fits your operation.",
     "body": "Tell us a little about your business. We’ll come back with the right questions, not a generic pitch.",
+    "formSubmit": {
+      "endpoint": "https://formsubmit.co/partner@logistra.in",
+      "successUrl": "https://www.logistra.in/contact?submitted=1",
+      "subject": "New Logistra fulfilment assessment",
+      "template": "table"
+    },
     "orderRanges": ["Under 500", "500–2,000", "2,000–5,000", "5,000+"],
     "channels": ["Shopify", "Amazon", "Flipkart", "ONDC", "Multiple channels", "Other"],
     "categories": ["Apparel & accessories", "Beauty & personal care", "Home & lifestyle", "Food & consumables", "Other"]
