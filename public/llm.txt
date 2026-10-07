@@ -1,0 +1,44 @@
+# Logistra
+
+> Logistra helps growing D2C brands position best-selling inventory closer to demand for faster delivery, better customer experience, and approximately similar delivery cost.
+
+## About
+
+Logistra is an India-focused e-commerce fulfilment partner for growing D2C brands, marketplace sellers, and regional businesses going online. Logistra operates the physical and digital workflow behind an order: receiving, storage, picking, packing, dispatch, tracking, returns, RTO, and reconciliation.
+
+The core operating model is simple: a brand forwards orders to Logistra, and Logistra fulfils them from inventory positioned closer to customers where appropriate. This helps brands explore significantly faster delivery without building their own distributed fulfilment network.
+
+## Important qualification
+
+Delivery timelines, distances, and shipping costs vary by product, weight, destination, carrier, and order mix. Any 7–9 day, 2–4 day, 1,500–2,500+ km, 200–700 km, or rupee-cost comparison on the website is a theoretical illustrative example, not a guaranteed Logistra performance claim.
+
+## Core services
+
+- Inbound receiving
+- SKU-level storage and inventory control
+- Pick and pack
+- Dispatch and shipment tracking
+- Returns and RTO processing
+- COD reconciliation
+- Kitting and value-added services
+
+## Primary audience
+
+- Growing D2C brands processing approximately 500–5,000 orders per month
+- Marketplace sellers managing multiple sales channels
+- Regional businesses moving online
+- Brands originating in Bihar and expanding across India
+
+## Website
+
+- Homepage: https://www.logistra.in/
+- How it works: https://www.logistra.in/how-it-works
+- Services: https://www.logistra.in/services
+- Technology: https://www.logistra.in/technology
+- About: https://www.logistra.in/about
+- Contact: https://www.logistra.in/contact
+
+## Contact
+
+- Email: partner@logistra.in
+- Direct call: 9135086955

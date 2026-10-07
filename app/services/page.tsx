@@ -1,8 +1,16 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import config from "@/config.json";
 import { ArrowUpRight, CheckIcon } from "@/components/icons";
 import { PageIntro, SectionHeading } from "@/components/page-intro";
 import CtaBand from "@/components/cta-band";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "E-commerce Fulfilment Services",
+  description: config.pages.services.body,
+  path: "/services",
+});
 
 export default function ServicesPage() {
   const copy = config.pages.services;

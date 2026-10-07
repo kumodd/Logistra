@@ -1,10 +1,18 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import config from "@/config.json";
 import { ArrowRight, ArrowUpRight, CheckIcon } from "@/components/icons";
 import WorkflowStrip from "@/components/workflow-strip";
 import CtaBand from "@/components/cta-band";
 import { SectionHeading } from "@/components/page-intro";
 import DistanceMap from "@/components/distance-map";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Deliver Faster. Keep Your Customers.",
+  description: config.home.body,
+  path: "/",
+});
 
 export default function HomePage() {
   return (

@@ -1,9 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import config from "@/config.json";
 import { ArrowRight, ArrowUpRight, CheckIcon } from "@/components/icons";
 import { PageIntro, SectionHeading } from "@/components/page-intro";
 import WorkflowStrip from "@/components/workflow-strip";
 import CtaBand from "@/components/cta-band";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "How E-commerce Fulfilment Works",
+  description: config.pages.howItWorks.body,
+  path: "/how-it-works",
+});
 
 export default function HowItWorksPage() {
   const copy = config.pages.howItWorks;

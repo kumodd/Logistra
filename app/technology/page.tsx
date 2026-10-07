@@ -1,8 +1,16 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import config from "@/config.json";
 import { ArrowUpRight } from "@/components/icons";
 import { PageIntro, SectionHeading } from "@/components/page-intro";
 import CtaBand from "@/components/cta-band";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Fulfilment Technology and Integrations",
+  description: config.pages.technology.body,
+  path: "/technology",
+});
 
 export default function TechnologyPage() {
   const copy = config.pages.technology;

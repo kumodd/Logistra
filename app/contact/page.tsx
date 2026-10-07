@@ -1,7 +1,15 @@
 import config from "@/config.json";
+import type { Metadata } from "next";
 import { PinIcon } from "@/components/icons";
 import { PageIntro } from "@/components/page-intro";
 import ContactForm from "@/components/contact-form";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Partner with Logistra",
+  description: config.contact.body,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
