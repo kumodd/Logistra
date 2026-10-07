@@ -52,12 +52,49 @@
     },
     "comparison": {
       "eyebrow": "The business case",
-      "title": "From long-distance fulfilment to local fulfilment.",
+      "title": "See the Difference: From Long-Distance Shipping to Faster Delivery",
       "body": "Position the right inventory closer to the demand you already have. Keep the benefit where it matters: in the customer experience and the contribution margin.",
+      "subtitle": "A theoretical, illustrative example of what can change when your best-selling inventory is positioned closer to your customers.",
+      "badge": "Illustrative example",
       "withoutTitle": "Without Logistra",
       "withTitle": "With Logistra",
+      "beforeDescription": "A customer places an order. The product travels thousands of kilometres before reaching them.",
+      "withDescription": "The same order is fulfilled from inventory positioned closer to the customer.",
+      "beforeFootnote": "Longer transit → slower delivery → higher delivery friction",
+      "withFootnote": "Shorter distance → faster delivery → better customer experience",
+      "beforeInventory": ["Gujarat", "Kerala", "Maharashtra", "Tamil Nadu", "Karnataka", "Rajasthan"],
+      "beforeDemand": ["Bihar", "Jharkhand", "Kolkata", "Lucknow"],
+      "withInventory": ["Logistra / Eastern India"],
+      "withDemand": ["Bihar", "Jharkhand", "Kolkata", "Eastern India demand"],
+      "beforeMetrics": [
+        { "value": "~1,500–2,500+ km", "label": "Shipping distance" },
+        { "value": "7–9 days", "label": "Typical delivery" },
+        { "value": "~₹100–₹130", "label": "Illustrative shipping cost / order" }
+      ],
+      "withMetrics": [
+        { "value": "~200–700 km", "label": "Shipping distance" },
+        { "value": "2–4 days", "label": "Illustrative delivery" },
+        { "value": "~₹95–₹125", "label": "Illustrative shipping cost / order" }
+      ],
       "without": ["Inventory far from customers", "7–9 day delivery on long-distance lanes", "Longer shipping distance", "Higher cost per shipment", "More delivery-related customer friction"],
-      "with": ["Best-selling inventory closer to demand", "Significantly faster delivery", "Shorter shipping distance", "Approximately the same delivery cost", "Better customer experience"]
+      "with": ["Best-selling inventory closer to demand", "Significantly faster delivery", "Shorter shipping distance", "Approximately the same delivery cost", "Better customer experience"],
+      "impactEyebrow": "Theoretical impact",
+      "impact": [
+        { "before": "7–9 days", "after": "2–4 days", "label": "Illustrative delivery" },
+        { "before": "~2,000 km", "after": "~200–700 km", "label": "Illustrative distance" },
+        { "before": "~₹100–₹130 / order", "after": "~₹95–₹125 / order", "label": "Illustrative shipping cost" }
+      ],
+      "impactCaption": "Illustrative example only. Actual delivery timelines and shipping costs vary by product, weight, destination, carrier, and order mix.",
+      "benefits": [
+        { "number": "01", "title": "Faster delivery", "body": "Give customers a significantly better delivery experience." },
+        { "number": "02", "title": "Better unit economics", "body": "Reduce long-distance fulfilment without relying on expensive expedited shipping." },
+        { "number": "03", "title": "Lower delivery friction", "body": "Fewer delays, fewer “Where is my order?” moments, and fewer customers waiting a week or more." },
+        { "number": "04", "title": "No need to build another warehouse", "body": "Logistra provides the local fulfilment layer while you continue focusing on your brand and growth." }
+      ],
+      "closingTitle": "Your customer doesn't care where your warehouse is.",
+      "closingEmphasis": "They care when their order arrives.",
+      "closingBody": "Position best-selling inventory closer to demand and give the delivery experience room to work harder for your brand.",
+      "closingButton": "Partner with Logistra"
     },
     "finalCta": {
       "eyebrow": "Make distance work less hard",

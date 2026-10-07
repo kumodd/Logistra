@@ -4,6 +4,7 @@ import { ArrowRight, ArrowUpRight, CheckIcon } from "@/components/icons";
 import WorkflowStrip from "@/components/workflow-strip";
 import CtaBand from "@/components/cta-band";
 import { SectionHeading } from "@/components/page-intro";
+import DistanceMap from "@/components/distance-map";
 
 export default function HomePage() {
   return (
@@ -73,11 +74,28 @@ export default function HomePage() {
       <section className="d2c-comparison section-padding">
         <div className="shell">
           <div className="section-kicker"><span className="eyebrow">{config.home.comparison.eyebrow}</span><span>04 / 05</span></div>
-          <SectionHeading eyebrow={config.home.comparison.eyebrow} title={config.home.comparison.title} body={config.home.comparison.body} />
+          <div className="d2c-comparison-heading"><SectionHeading eyebrow={config.home.comparison.eyebrow} title={config.home.comparison.title} body={config.home.comparison.subtitle} /><span className="illustrative-badge">{config.home.comparison.badge}</span></div>
+          <p className="d2c-comparison-context">{config.home.comparison.body}</p>
           <div className="d2c-comparison-grid">
-            <article className="d2c-comparison-card without"><span className="comparison-label">01</span><h3>{config.home.comparison.withoutTitle}</h3><ul>{config.home.comparison.without.map((item) => <li key={item}><span className="comparison-mark">—</span>{item}</li>)}</ul></article>
-            <article className="d2c-comparison-card with"><span className="comparison-label">02</span><h3>{config.home.comparison.withTitle}</h3><ul>{config.home.comparison.with.map((item) => <li key={item}><CheckIcon size={15} />{item}</li>)}</ul></article>
+            <article className="d2c-comparison-card before-panel">
+              <div className="comparison-panel-head"><span>BEFORE LOGISTRA</span><small>LONG-DISTANCE FULFILMENT</small></div>
+              <DistanceMap scenario="before" inventoryLabels={config.home.comparison.beforeInventory} demandLabels={config.home.comparison.beforeDemand} />
+              <div className="comparison-metrics">{config.home.comparison.beforeMetrics.map((metric) => <div className="comparison-metric" key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}</div>
+              <div className="comparison-panel-copy"><p>{config.home.comparison.beforeDescription}</p><strong>{config.home.comparison.beforeFootnote}</strong></div>
+              <ul className="compare-points">{config.home.comparison.without.map((item) => <li key={item}><span className="comparison-mark">—</span>{item}</li>)}</ul>
+            </article>
+            <article className="d2c-comparison-card with-panel">
+              <div className="comparison-panel-head"><span>WITH LOGISTRA</span><small>CLOSER TO DEMAND</small></div>
+              <DistanceMap scenario="with" inventoryLabels={config.home.comparison.withInventory} demandLabels={config.home.comparison.withDemand} />
+              <div className="comparison-metrics">{config.home.comparison.withMetrics.map((metric) => <div className="comparison-metric" key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}</div>
+              <div className="comparison-panel-copy"><p>{config.home.comparison.withDescription}</p><strong>{config.home.comparison.withFootnote}</strong></div>
+              <ul className="compare-points">{config.home.comparison.with.map((item) => <li key={item}><CheckIcon size={15} />{item}</li>)}</ul>
+            </article>
           </div>
+          <div className="transformation-bridge"><span className="eyebrow">The shift</span><strong>Move inventory closer to demand.</strong><p>Faster delivery. Without a major increase in delivery cost.</p></div>
+          <div className="theoretical-impact"><div className="impact-heading"><span className="eyebrow">{config.home.comparison.impactEyebrow}</span><p>{config.home.comparison.impactCaption}</p></div><div className="impact-grid">{config.home.comparison.impact.map((item) => <article className="impact-card" key={item.label}><strong>{item.before}</strong><span className="impact-arrow">↓</span><strong className="impact-after">{item.after}</strong><small>{item.label}</small></article>)}</div></div>
+          <div className="comparison-benefits">{config.home.comparison.benefits.map((benefit) => <article className="comparison-benefit" key={benefit.number}><span>{benefit.number}</span><div><h3>{benefit.title}</h3><p>{benefit.body}</p></div><CheckIcon size={16} /></article>)}</div>
+          <div className="comparison-closing"><span className="eyebrow eyebrow-light">A better delivery story</span><h2>{config.home.comparison.closingTitle}<br /><em>{config.home.comparison.closingEmphasis}</em></h2><p>{config.home.comparison.closingBody}</p><Link className="button button-light" href="/contact">{config.home.comparison.closingButton} <ArrowUpRight size={16} /></Link></div>
         </div>
       </section>
 
