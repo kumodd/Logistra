@@ -29,12 +29,12 @@ export default function Header() {
             </Link>
           ))}
           <Link className="button button-small button-dark mobile-cta" href="/contact" onClick={() => setOpen(false)}>
-            Talk to us <ArrowUpRight size={15} />
+            Partner with Logistra <ArrowUpRight size={15} />
           </Link>
         </nav>
 
         <Link className="button button-small button-dark header-cta" href="/contact">
-          Talk to us <ArrowUpRight size={15} />
+          Partner with Logistra <ArrowUpRight size={15} />
         </Link>
         <button className="menu-trigger" onClick={() => setOpen(true)} aria-label="Open navigation"><MenuIcon /></button>
       </div>

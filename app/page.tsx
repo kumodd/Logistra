@@ -12,10 +12,10 @@ export default function HomePage() {
         <div className="shell hero-grid">
           <div className="hero-copy">
             <span className="eyebrow">{config.home.eyebrow}</span>
-            <h1>{config.home.hero.line1}<br />{config.home.hero.line2} <em>{config.home.hero.emphasis}</em><br />{config.home.hero.line3}</h1>
+            <h1>{config.home.hero.line1}<br />{config.home.hero.line2} <em>{config.home.hero.emphasis}</em></h1>
             <p>{config.home.body}</p>
             <div className="hero-actions">
-              <Link className="button button-dark" href="/contact">Talk to a fulfilment expert <ArrowUpRight size={16} /></Link>
+              <Link className="button button-dark" href="/contact">Partner with Logistra <ArrowUpRight size={16} /></Link>
               <Link className="text-link" href="/how-it-works">See how it works <ArrowRight size={16} /></Link>
             </div>
             <p className="audience-note">{config.home.audience}</p>
@@ -37,34 +37,53 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="d2c-problem section-padding">
+        <div className="shell">
+          <div className="section-kicker"><span className="eyebrow">{config.home.problem.eyebrow}</span><span>01 / 05</span></div>
+          <div className="d2c-problem-intro">
+            <div className="section-heading"><span className="eyebrow">{config.home.problem.operatorEyebrow}</span><h2>{config.home.problem.title}</h2><p>{config.home.problem.body}</p></div>
+            <blockquote>{config.home.problem.quote}</blockquote>
+          </div>
+          <div className="d2c-pain-grid">
+            {config.home.problem.points.map((point) => <article className="d2c-pain-card" key={point.number}><span>{point.number}</span><h3>{point.title}</h3><p>{point.body}</p></article>)}
+          </div>
+          <p className="d2c-problem-close">{config.home.problem.close}</p>
+        </div>
+      </section>
+
+      <section className="d2c-solution section-padding">
+        <div className="shell">
+          <div className="section-kicker"><span className="eyebrow">{config.home.solution.eyebrow}</span><span>02 / 05</span></div>
+          <div className="d2c-solution-intro"><SectionHeading eyebrow={config.home.solution.eyebrow} title={config.home.solution.title} body={config.home.solution.body} /><p className="d2c-solution-note">{config.home.solution.note}</p></div>
+          <div className="d2c-solution-flow">
+            {config.home.solution.steps.map((step, index) => <div className="d2c-solution-step" key={step.number}><div className="d2c-step-top"><span>{step.number}</span>{index < config.home.solution.steps.length - 1 && <ArrowRight size={16} />}</div><h3>{step.title}</h3><p>{step.body}</p></div>)}
+          </div>
+          <div className="d2c-solution-highlight"><span className="eyebrow eyebrow-light">{config.home.solution.highlightEyebrow}</span><strong>{config.home.solution.highlight}</strong></div>
+        </div>
+      </section>
+
       <section className="workflow-section">
         <div className="shell">
-          <div className="section-kicker"><span className="eyebrow">The full picture</span><span>01 / 04</span></div>
+          <div className="section-kicker"><span className="eyebrow">The full picture</span><span>03 / 05</span></div>
           <SectionHeading eyebrow={config.home.workflowIntro.eyebrow} title={config.home.workflowIntro.title} body={config.home.workflowIntro.body} />
           <WorkflowStrip />
         </div>
       </section>
 
-      <section className="outcome-section section-padding">
-        <div className="shell outcome-grid">
-          <div className="outcome-copy">
-            <span className="eyebrow">{config.home.outcome.eyebrow}</span>
-            <h2>{config.home.outcome.title}<br /><em>{config.home.outcome.emphasis}</em></h2>
-            <p>{config.home.outcome.body}</p>
-            <Link className="text-link" href="/services">{config.home.outcome.link} <ArrowRight size={16} /></Link>
-          </div>
-          <div className="signal-card">
-            <div className="signal-head"><span>OPERATIONAL SIGNAL</span><span>NOW</span></div>
-            <div className="signal-main"><div className="signal-circle">L</div><div><strong>One source of truth</strong><span>Inventory, orders, returns</span></div></div>
-            <div className="signal-bars"><i style={{ height: "42%" }} /><i style={{ height: "70%" }} /><i style={{ height: "55%" }} /><i style={{ height: "84%" }} /><i style={{ height: "64%" }} /><i style={{ height: "92%" }} /><i style={{ height: "78%" }} /><i style={{ height: "100%" }} /><i style={{ height: "90%" }} /><i style={{ height: "100%" }} /></div>
-            <div className="signal-foot"><span>VISIBILITY</span><strong>↑ CLEARER</strong></div>
+      <section className="d2c-comparison section-padding">
+        <div className="shell">
+          <div className="section-kicker"><span className="eyebrow">{config.home.comparison.eyebrow}</span><span>04 / 05</span></div>
+          <SectionHeading eyebrow={config.home.comparison.eyebrow} title={config.home.comparison.title} body={config.home.comparison.body} />
+          <div className="d2c-comparison-grid">
+            <article className="d2c-comparison-card without"><span className="comparison-label">01</span><h3>{config.home.comparison.withoutTitle}</h3><ul>{config.home.comparison.without.map((item) => <li key={item}><span className="comparison-mark">—</span>{item}</li>)}</ul></article>
+            <article className="d2c-comparison-card with"><span className="comparison-label">02</span><h3>{config.home.comparison.withTitle}</h3><ul>{config.home.comparison.with.map((item) => <li key={item}><CheckIcon size={15} />{item}</li>)}</ul></article>
           </div>
         </div>
       </section>
 
       <section className="audience-section section-padding section-rule-top">
         <div className="shell">
-          <div className="section-kicker"><span className="eyebrow">Who it is for</span><span>02 / 04</span></div>
+          <div className="section-kicker"><span className="eyebrow">Who it is for</span><span>05 / 05</span></div>
           <SectionHeading eyebrow={config.home.audienceIntro.eyebrow} title={config.home.audienceIntro.title} body={config.home.audienceIntro.body} />
           <div className="audience-grid">
             {config.home.audiences.map((item) => <article className="audience-card" key={item.number}><span>{item.number}</span><h3>{item.title}</h3><p>{item.body}</p><Link href="/contact" aria-label={`Learn more about ${item.title}`}><ArrowUpRight size={17} /></Link></article>)}
@@ -79,7 +98,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand home />
     </>
   );
 }

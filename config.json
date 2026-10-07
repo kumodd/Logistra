@@ -14,20 +14,62 @@
     { "label": "About", "href": "/about" }
   ],
   "home": {
-    "eyebrow": "Built for the next stage",
+    "eyebrow": "D2C fulfilment, closer to demand",
     "hero": {
-      "line1": "The work behind",
-      "line2": "every",
-      "emphasis": "order,",
-      "line3": "handled."
+      "line1": "Deliver Faster.",
+      "line2": "Keep Your",
+      "emphasis": "Customers."
     },
-    "title": "The work behind every order, handled.",
-    "body": "From inventory receiving to final dispatch—and everything in between. Logistra runs the physical and digital fulfilment workflow so your team can focus on building the business.",
-    "audience": "For D2C brands · marketplace sellers · regional businesses going online",
+    "title": "Deliver Faster. Keep Your Customers.",
+    "body": "Your customers shouldn't have to wait 7–9 days for an order just because your inventory is sitting far away. Logistra helps D2C brands place their best-selling products closer to customers—so you can deliver faster without significantly increasing delivery cost.",
+    "audience": "For D2C brands · faster delivery · healthier unit economics",
+    "problem": {
+      "eyebrow": "The delivery gap",
+      "operatorEyebrow": "For the D2C operator",
+      "title": "Your product can be great. Your delivery experience can still lose the customer.",
+      "body": "When an order travels around 2,000 km to reach Eastern India, delivery can take 7–9 days. That distance shows up in the customer experience—and in the economics of every shipment.",
+      "quote": "Your customer doesn't care where your warehouse is. They care when their order arrives.",
+      "points": [
+        { "number": "01", "title": "Slow delivery", "body": "Customers increasingly expect fast, predictable delivery. A long wait creates doubt after the checkout click." },
+        { "number": "02", "title": "Higher shipping cost", "body": "Long-distance fulfilment can increase the cost of each individual shipment as every order travels farther." },
+        { "number": "03", "title": "Lost customers", "body": "Customers may switch brands because of the delivery experience—not because your product is not good enough." }
+      ],
+      "close": "You shouldn't have to choose between fast delivery and healthy unit economics."
+    },
+    "solution": {
+      "eyebrow": "The Logistra model",
+      "title": "Move inventory closer to your customers.",
+      "body": "Logistra partners with D2C brands to store their fast-moving and best-selling products in locations closer to demand. You forward the order. We handle what happens next.",
+      "note": "No need to build your own distributed fulfilment network.",
+      "steps": [
+        { "number": "01", "title": "Order received", "body": "Your customer places an order through your storefront or sales channel." },
+        { "number": "02", "title": "Order forwarded to Logistra", "body": "The order is sent to Logistra and enters the fulfilment workflow." },
+        { "number": "03", "title": "We fulfil the order", "body": "We handle storage, picking, packing and dispatch from closer-to-demand inventory." },
+        { "number": "04", "title": "Customer gets it faster", "body": "A shorter shipping distance means a faster, more predictable delivery experience." }
+      ],
+      "highlightEyebrow": "The outcome",
+      "highlight": "Faster delivery. Better customer experience. Approximately the same delivery cost per order."
+    },
+    "comparison": {
+      "eyebrow": "The business case",
+      "title": "From long-distance fulfilment to local fulfilment.",
+      "body": "Position the right inventory closer to the demand you already have. Keep the benefit where it matters: in the customer experience and the contribution margin.",
+      "withoutTitle": "Without Logistra",
+      "withTitle": "With Logistra",
+      "without": ["Inventory far from customers", "7–9 day delivery on long-distance lanes", "Longer shipping distance", "Higher cost per shipment", "More delivery-related customer friction"],
+      "with": ["Best-selling inventory closer to demand", "Significantly faster delivery", "Shorter shipping distance", "Approximately the same delivery cost", "Better customer experience"]
+    },
+    "finalCta": {
+      "eyebrow": "Make distance work less hard",
+      "title": "Don't make distance",
+      "emphasis": "your customer's problem.",
+      "body": "Keep your best-selling products where your customers are. Deliver faster. Improve customer experience. Protect your margins.",
+      "button": "Partner with Logistra"
+    },
     "workflowIntro": {
-      "eyebrow": "One connected operation",
-      "title": "From first scan to final mile.",
-      "body": "Fulfilment is more than a box leaving a warehouse. It is a chain of small, important decisions. We keep the whole chain moving."
+      "eyebrow": "How it works",
+      "title": "A shorter distance. A controlled operation.",
+      "body": "Once your inventory is positioned closer to demand, Logistra runs the physical and digital workflow behind each order—from receiving and storage to pick, pack, dispatch and returns."
     },
     "outcome": {
       "eyebrow": "A little more headspace",
