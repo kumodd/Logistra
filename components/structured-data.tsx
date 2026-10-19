@@ -44,8 +44,8 @@ export default function StructuredData() {
         name: "E-commerce fulfilment for growing D2C brands",
         serviceType: "E-commerce fulfilment",
         provider: { "@id": organizationId },
-        areaServed: { "@type": "Country", name: "India" },
-        description: "Storage, pick and pack, dispatch, returns, RTO and operational visibility for growing brands.",
+        areaServed: { "@type": "Place", name: "Eastern India" },
+        description: "Regional e-commerce fulfilment assessment and agreed receiving, storage, pick and pack, dispatch, and returns workflows for growing brands.",
       },
     ],
   };

@@ -10,6 +10,8 @@
   },
   "navigation": [
     { "label": "How it works", "href": "/how-it-works" },
+    { "label": "Shared fulfilment", "href": "/#shared-fulfilment" },
+    { "label": "Business case", "href": "/#business-case" },
     { "label": "Services", "href": "/services" },
     { "label": "Technology", "href": "/technology" },
     { "label": "About", "href": "/about" }
@@ -50,6 +52,20 @@
       ],
       "highlightEyebrow": "The outcome",
       "highlight": "Faster delivery. Better customer experience. Approximately the same delivery cost per order."
+    },
+    "sharedFulfilment": {
+      "eyebrow": "A smarter way to fulfil regional orders",
+      "title": "Your own brand. Shared infrastructure. Less operational burden.",
+      "body": "Expanding into a new region does not have to mean building and operating another warehouse. Logistra helps growing brands position selected products closer to customers in Eastern India through a shared fulfilment model. Instead of establishing a separate fulfilment operation, brands can use shared facilities and operational resources to support regional order fulfilment.",
+      "detail": "From receiving and storage to picking, packing, dispatch, and returns, Logistra manages the agreed operational workflow while your business continues to focus on building its brand.",
+      "benefits": [
+        "Avoid the immediate need to build a dedicated regional fulfilment operation.",
+        "Position selected fast-selling products closer to regional customers.",
+        "Use an organised workflow for inventory, orders, dispatch, and returns.",
+        "Evaluate regional expansion without automatically committing to a standalone warehouse."
+      ],
+      "note": "Shared infrastructure does not mean shared inventory. Each brand’s stock, SKUs, and orders remain identified and controlled within the agreed operating model.",
+      "button": "Explore Shared Fulfilment"
     },
     "comparison": {
       "eyebrow": "The business case",
@@ -97,6 +113,73 @@
       "closingBody": "Position best-selling inventory closer to demand and give the delivery experience room to work harder for your brand.",
       "closingButton": "Partner with Logistra"
     },
+    "commercial": {
+      "eyebrow": "Commercial clarity",
+      "title": "Know the cost before you move your inventory.",
+      "body": "Regional fulfilment should make commercial sense for your business. Before positioning inventory closer to customers, evaluate the complete fulfilment cost—not just the courier charge.",
+      "detail": "The actual cost depends on your products, dimensions, order profile, inventory requirements, destination mix, and selected services. Share your requirements with Logistra to discuss a suitable operating model and commercial estimate.",
+      "tableTitle": "Cost components to assess",
+      "rows": [
+        { "component": "Receiving & handling", "basis": "Inbound volume, SKU count, and receiving requirements.", "status": "Requirement-dependent" },
+        { "component": "Storage", "basis": "Inventory profile, space required, and time held.", "status": "Requirement-dependent" },
+        { "component": "Picking & packing", "basis": "Order profile, item handling, packaging, and value-added work.", "status": "Requirement-dependent" },
+        { "component": "Outbound shipping", "basis": "Destination mix, parcel profile, carrier, and service level.", "status": "Requirement-dependent" },
+        { "component": "Returns & reverse logistics", "basis": "Returns volume, inspection, restocking, and exception handling.", "status": "Requirement-dependent" },
+        { "component": "Inventory transfer", "basis": "The one-time or recurring move into the regional operation.", "status": "Assess separately" },
+        { "component": "Optional services", "basis": "Kitting, relabelling, inserts, custom packaging, or other agreed work.", "status": "Optional" }
+      ],
+      "totalCostNote": "A useful comparison may include current long-distance shipping, inbound transportation, receiving, storage, pick-and-pack, outbound shipping, returns, inventory transfers, and other agreed operational costs. Shorter shipping distance does not automatically guarantee a lower total cost.",
+      "button": "Request a Fulfilment Cost Estimate"
+    },
+    "eligibility": {
+      "eyebrow": "Fit for your operation",
+      "title": "Could regional fulfilment fit your business?",
+      "body": "Suitability depends on your products, order profile, inventory location, customer geography, and the role you want Logistra to play. A practical assessment is the right first step.",
+      "checklistTitle": "Helpful information to share",
+      "checklist": ["Product type, size, and weight", "Approximate monthly order volume", "Existing inventory location", "Customer states, cities, or destination pincodes", "Best-selling SKUs and regional demand", "Storage, replenishment, and order-transfer requirements"],
+      "button": "Check Whether Logistra Fits Your Business"
+    },
+    "coverage": {
+      "eyebrow": "Regional serviceability",
+      "title": "Closer to customers in Eastern India.",
+      "body": "Regional fulfilment works best when inventory positioning aligns with actual customer demand. Tell us where your customers are located and which products you sell, and Logistra can assess whether regional fulfilment is appropriate for your business.",
+      "locationLabel": "Confirmed business location",
+      "location": "Patna, Bihar, India",
+      "note": "Delivery coverage and timelines depend on actual facility and carrier availability. Share target states, cities, or pincodes for a serviceability discussion.",
+      "button": "Check Serviceability"
+    },
+    "onboarding": {
+      "eyebrow": "What happens next",
+      "title": "A considered path from interest to operations.",
+      "body": "The right regional model starts with your order profile and ends with an operating plan both sides understand.",
+      "button": "Plan Your Regional Fulfilment"
+    },
+    "trust": {
+      "eyebrow": "Operational transparency",
+      "title": "A clear process before a performance promise.",
+      "body": "Logistra’s website uses process and illustrative examples rather than unverified operating statistics. In a commercial discussion, we can review the controls, responsibilities, assumptions, and evidence relevant to your operation.",
+      "controls": [
+        { "title": "Receiving & SKU identification", "body": "Inbound inventory is received, counted, scanned or identified, and recorded according to the agreed process." },
+        { "title": "Pick, pack & dispatch handoff", "body": "Orders move through an agreed fulfilment sequence before carrier handoff and tracking." },
+        { "title": "Returns & exceptions", "body": "Returned or exceptional shipments are routed to the agreed inspection, restock, quarantine, or communication step." },
+        { "title": "Evidence before claims", "body": "Any future performance metric should include its period, sample, order profile, origin, destination, and limitations." }
+      ],
+      "note": "Specific systems, integrations, reporting, service levels, and performance metrics should be confirmed for the proposed operating model."
+    },
+    "faqs": [
+      { "question": "What is shared fulfilment?", "answer": "Shared fulfilment is a model where multiple brands can use common fulfilment infrastructure and operational resources. Each brand’s inventory, SKUs, and orders remain identified and controlled within the agreed operating process." },
+      { "question": "Do brands share inventory?", "answer": "No. Shared infrastructure does not mean combining stock. Brand inventory and orders should remain appropriately identified and controlled; the exact operating controls are agreed during assessment." },
+      { "question": "Can I use Logistra alongside my existing warehouse?", "answer": "That can be assessed. Many regional models begin with selected fast-moving SKUs while a brand continues using its existing setup for other inventory or destinations." },
+      { "question": "Which products should I move to a regional facility?", "answer": "Usually the discussion starts with best-selling products, regional demand, product dimensions and weight, replenishment practicality, and the cost of moving or holding inventory. Suitability is business-specific." },
+      { "question": "Which locations can Logistra currently serve?", "answer": "Logistra is based in Patna, Bihar, with a focus on Eastern India. Actual serviceability and delivery timelines depend on facility and carrier availability, so share target states, cities, or pincodes for assessment." },
+      { "question": "How is fulfilment pricing determined?", "answer": "Pricing depends on receiving, storage, handling, pick-and-pack, packaging, outbound shipping, returns, inventory transfers, optional services, and your order and product profile. Request a commercial estimate for your requirements." },
+      { "question": "How should I compare total fulfilment costs?", "answer": "Compare current long-distance shipping with the full proposed model, including inbound transfer, receiving, storage, pick-and-pack, outbound shipping, returns, and other agreed costs. Shorter outbound distance alone is not the full calculation." },
+      { "question": "How do my orders reach Logistra?", "answer": "The order handoff process should be agreed during assessment based on your channels, systems, and operating requirements. Do not assume a particular integration is available until it is confirmed." },
+      { "question": "How are returns handled?", "answer": "Returns can be received, inspected, classified, restocked, repacked, quarantined, or escalated according to the agreed workflow and product requirements." },
+      { "question": "How much inventory should I position regionally?", "answer": "That depends on regional demand, replenishment lead time, product profile, storage requirements, and the level of service you want to support. Logistra can assess the operating assumptions with you." },
+      { "question": "What information is required for a quotation?", "answer": "Useful inputs include product type, size and weight, monthly orders, current inventory location, customer geography, best-selling SKUs, storage and replenishment needs, and any required order-transfer process." },
+      { "question": "How do I get started?", "answer": "Partner with Logistra through the enquiry form. Share your business and fulfilment requirements, then discuss suitability, commercials, responsibilities, inventory planning, and the first operating step." }
+    ],
     "finalCta": {
       "eyebrow": "Make distance work less hard",
       "title": "Don't make distance",
@@ -117,9 +200,9 @@
       "link": "Explore our services"
     },
     "audienceIntro": {
-      "eyebrow": "Built for the next stage",
-      "title": "Not too much. Not too little. Just right for where you are.",
-      "body": "You do not need an enterprise machine. You need an operation that understands your volume, your customers and your ambition."
+      "eyebrow": "Who it is for",
+      "title": "A regional fulfilment model for the next stage of growth.",
+      "body": "Growing D2C brands, established brands expanding into Eastern India, marketplace sellers, and regional businesses selling online can all start with a practical suitability assessment."
     },
     "proofIntro": {
       "eyebrow": "Why Logistra",
@@ -147,6 +230,11 @@
         "number": "03",
         "title": "Regional businesses going online",
         "body": "Take an established business online without building a warehouse operation from scratch."
+      },
+      {
+        "number": "04",
+        "title": "Established brands expanding east",
+        "body": "Test a regional inventory position for Eastern India without automatically building a standalone warehouse operation."
       }
     ]
   },
@@ -154,72 +242,73 @@
     {
       "number": "01",
       "title": "Receive",
-      "short": "Your inventory comes to us.",
-      "body": "Every inbound shipment is counted, scanned and checked before it enters the system.",
-      "details": ["Shipment appointment", "Quantity verification", "SKU / barcode scan", "Damage inspection"]
+      "short": "Agree the inbound handoff.",
+      "body": "The operating plan defines how inbound inventory is received, counted, identified, and recorded.",
+      "details": ["Inbound appointment", "Quantity verification", "SKU identification", "Exception owner"]
     },
     {
       "number": "02",
       "title": "Store",
-      "short": "Every SKU has a place.",
-      "body": "Inventory is assigned a defined location, making stock easier to find and harder to lose.",
-      "details": ["Location tracking", "Stock status", "Cycle counts", "Low-stock visibility"]
+      "short": "Keep every SKU accounted for.",
+      "body": "The agreed storage and inventory process defines locations, status updates, and reconciliation.",
+      "details": ["Location plan", "Stock status", "Reconciliation", "Replenishment review"]
     },
     {
       "number": "03",
       "title": "Synchronise",
-      "short": "Your orders come to us.",
-      "body": "Orders from the channels you already use flow into one fulfilment queue.",
-      "details": ["Shopify", "Amazon", "Flipkart", "ONDC", "API / CSV"]
+      "short": "Define the order handoff.",
+      "body": "Orders reach the fulfilment workflow through the channel or process agreed for your operation.",
+      "details": ["Channel assessment", "Order handoff", "SKU mapping", "Exception owner"]
     },
     {
       "number": "04",
       "title": "Pick & pack",
-      "short": "Every order follows a controlled process.",
-      "body": "Reserve, pick, verify, pack, weigh and label—each order moves through the same considered sequence.",
-      "details": ["Stock reserved", "Barcode verification", "Quality check", "Label generation"]
+      "short": "Run a controlled fulfilment step.",
+      "body": "The operating plan covers picking, verification, packing, weighing, and labelling as required.",
+      "details": ["Pick sequence", "Verification", "Packaging", "Label handoff"]
     },
     {
       "number": "05",
       "title": "Ship",
-      "short": "Packed, labelled and ready.",
-      "body": "Shipments are created, manifested and handed over with tracking and exception visibility.",
-      "details": ["Courier allocation", "Manifest generation", "Courier handover", "Exception monitoring"]
+      "short": "Make the dispatch handoff clear.",
+      "body": "Carrier selection, manifesting, tracking, and exception responsibilities are agreed before launch.",
+      "details": ["Carrier assessment", "Manifesting", "Handover", "Exception process"]
     },
     {
       "number": "06",
       "title": "Return",
-      "short": "The workflow continues when orders come back.",
-      "body": "Returns and RTOs are inspected, classified and routed back into inventory—not left as a pile of exceptions.",
-      "details": ["Inspect & classify", "Restock or repack", "Quarantine damaged units", "Update inventory"]
+      "short": "Give returns a next step.",
+      "body": "Returns and RTOs can be inspected, classified, and routed according to the agreed product and exception workflow.",
+      "details": ["Inspect & classify", "Restock or repack", "Quarantine", "Communication owner"]
     }
   ],
   "services": [
-    { "number": "01", "name": "Inbound receiving", "description": "Receive, count, scan and verify inventory as it enters the operation." },
-    { "number": "02", "name": "Storage", "description": "Organised SKU-level storage with location tracking and clear inventory states." },
-    { "number": "03", "name": "Pick & pack", "description": "Barcode-assisted picking, verification and professional packing for every order." },
-    { "number": "04", "name": "Dispatch", "description": "Courier handover, manifests, shipment tracking and exception monitoring." },
-    { "number": "05", "name": "Returns & RTO", "description": "Inspection, classification, restocking and quarantine built into the workflow." },
-    { "number": "06", "name": "COD reconciliation", "description": "Shipment-level remittance tracking and exception management." },
-    { "number": "07", "name": "Kitting & value-add", "description": "Bundling, relabelling, inserts, quality checks and custom packaging." }
+    { "number": "01", "name": "Inbound receiving", "description": "Receive, count, identify and record inventory as it enters the agreed operation." },
+    { "number": "02", "name": "Storage", "description": "Organised SKU-level storage with an agreed location and inventory-record process." },
+    { "number": "03", "name": "Pick & pack", "description": "Picking, verification and professional packing according to the agreed order workflow." },
+    { "number": "04", "name": "Dispatch", "description": "Carrier handoff, manifesting, shipment tracking and exception responsibilities defined for the operation." },
+    { "number": "05", "name": "Returns & RTO", "description": "Inspection, classification, restocking and quarantine routed through an agreed returns workflow." },
+    { "number": "06", "name": "Operational reconciliation", "description": "Review agreed inventory, order, shipment and returns records with clear exception ownership." },
+    { "number": "07", "name": "Kitting & value-add", "description": "Bundling, relabelling, inserts, quality checks or custom packaging can be scoped where applicable." }
   ],
   "integrations": {
-    "available": ["Shopify", "Amazon", "Flipkart", "ONDC", "API", "CSV"],
+    "confirmed": ["Receiving, storage, pick & pack, dispatch, and returns", "An agreed order handoff and reporting scope"],
+    "toConfirm": ["Shopify", "Amazon", "Flipkart", "ONDC", "API / CSV"],
     "planned": ["WooCommerce", "Custom storefronts"]
   },
   "why": [
     { "title": "Accurate inventory", "body": "Controlled, SKU-level operations from receiving to return." },
-    { "title": "Transparent operations", "body": "See orders, inventory, fulfilment and returns in one view." },
+    { "title": "Transparent operations", "body": "Agree how orders, inventory, fulfilment and returns will be recorded and reviewed." },
     { "title": "Built for growing teams", "body": "Professional systems for businesses that are not ready for enterprise complexity." },
     { "title": "Returns under control", "body": "Reverse logistics is part of the workflow, not an afterthought." }
   ],
   "onboarding": [
-    { "number": "01", "title": "Tell us about your business", "body": "Share your order volume, SKUs, channels and current fulfilment setup." },
-    { "number": "02", "title": "We understand the operation", "body": "We look at your products, packaging, storage and returns profile." },
-    { "number": "03", "title": "Inventory moves to Logistra", "body": "We receive, verify, locate and add your inventory to the system." },
-    { "number": "04", "title": "Connect your channels", "body": "Your orders begin flowing into one connected fulfilment workflow." },
-    { "number": "05", "title": "We fulfil", "body": "Pick → verify → pack → ship. A consistent process for every order." },
-    { "number": "06", "title": "You monitor", "body": "Stay close to inventory, orders, returns, RTO and performance." }
+    { "number": "01", "title": "Understand your business", "body": "Collect product information, order volumes, current inventory location, and customer geography." },
+    { "number": "02", "title": "Identify suitable products", "body": "Determine which SKUs may benefit from regional positioning based on demand and replenishment considerations." },
+    { "number": "03", "title": "Evaluate commercials", "body": "Review relevant storage, handling, shipping, transfer, and returns costs with the assumptions made explicit." },
+    { "number": "04", "title": "Agree on operations", "body": "Define inventory quantities, receiving, order handoffs, dispatch, returns, reporting, and responsibilities." },
+    { "number": "05", "title": "Plan the inventory move", "body": "Agree on inventory preparation, transportation, receiving, and readiness to process eligible orders." },
+    { "number": "06", "title": "Begin and review", "body": "Start according to the agreed plan and review actual fulfilment performance and costs." }
   ],
   "pages": {
     "howItWorks": {
@@ -243,21 +332,21 @@
       "valueEmphasis": "More useful time.",
       "valuePoints": [
         { "title": "Operations you can explain", "body": "Clear steps, defined owners and fewer “where is that order?” moments." },
-        { "title": "Stock you can trust", "body": "Inventory states are visible from available to returned and quarantined." },
-        { "title": "Returns with a next step", "body": "Every returned unit is inspected and routed back into the workflow." }
+        { "title": "Stock records with context", "body": "The agreed process defines how inventory is identified, reconciled and moved through its next state." },
+        { "title": "Returns with a next step", "body": "Returned units can be inspected and routed according to the agreed product and exception workflow." }
       ]
     },
     "technology": {
       "eyebrow": "Technology",
-      "title": "The operation, with nothing hidden.",
-      "body": "Technology at Logistra has one job: make the physical work more reliable, visible and easier to act on.",
-      "platformEyebrow": "The Logistra platform",
-      "platformTitle": "One view of the work behind the order.",
-      "platformBody": "Orders, inventory, picking, shipping, returns and RTO are connected to the operation—not floating separately from it.",
+      "title": "Make the operating model visible.",
+      "body": "Technology should support the physical workflow—not outpace it. Logistra defines order handoff, inventory records, reporting, and integrations against the agreed operating model.",
+      "platformEyebrow": "The operating model",
+      "platformTitle": "Physical operations first.",
+      "platformBody": "Receiving, storage, picking, dispatch, returns, order handoff, and reporting should be clear before an operation begins. We confirm the practical scope for each brand rather than presenting an unverified software promise.",
       "platformLink": "Ask us what’s possible",
       "integrationEyebrow": "Integrations",
-      "integrationTitle": "Connected to the channels you already use.",
-      "integrationBody": "Orders from multiple channels should not create multiple versions of the truth. Bring them into one workflow.",
+      "integrationTitle": "Agree the order handoff before launch.",
+      "integrationBody": "Channel connections and order-transfer methods depend on your current stack and the proposed operating scope. We confirm the practical handoff during assessment.",
       "futureEyebrow": "A considered roadmap",
       "futureTitle": "Useful data, when it is ready.",
       "futureBody": "We are interested in what the data can make better—demand forecasts, RTO prediction, smarter slotting and clearer profitability. These are planned capabilities, not claims about today."

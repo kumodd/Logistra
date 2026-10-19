@@ -6,7 +6,7 @@
 
 Logistra is an India-focused e-commerce fulfilment partner for growing D2C brands, marketplace sellers, and regional businesses going online. Logistra operates the physical and digital workflow behind an order: receiving, storage, picking, packing, dispatch, tracking, returns, RTO, and reconciliation.
 
-The core operating model is simple: a brand forwards orders to Logistra, and Logistra fulfils them from inventory positioned closer to customers where appropriate. This helps brands explore significantly faster delivery without building their own distributed fulfilment network.
+The core operating model is simple: a brand forwards orders to Logistra, and Logistra fulfils them from selected inventory positioned closer to customers where appropriate. Through shared fulfilment infrastructure, brands can assess a regional operation without immediately building a standalone warehouse. Each brand’s inventory, SKUs, and orders remain identified and controlled within the agreed operating model.
 
 ## Important qualification
 
@@ -24,10 +24,23 @@ Delivery timelines, distances, and shipping costs vary by product, weight, desti
 
 ## Primary audience
 
-- Growing D2C brands processing approximately 500–5,000 orders per month
+- Growing D2C brands
 - Marketplace sellers managing multiple sales channels
+- Established brands exploring expansion into Eastern India
 - Regional businesses moving online
-- Brands originating in Bihar and expanding across India
+- Businesses assessing a regional fulfilment model based on their demand geography
+
+## Commercial clarity
+
+Logistra does not publish a public rate card on this website. A commercial estimate depends on product dimensions and weight, order profile, inventory requirements, destination mix, receiving, storage, pick and pack, packaging, outbound shipping, returns, inventory transfers, and selected services. Shorter outbound distance does not automatically guarantee a lower total fulfilment cost.
+
+## Shared fulfilment
+
+Multiple brands may use common fulfilment infrastructure and operational resources. Shared infrastructure does not mean shared inventory: brand stock, SKUs, and orders remain appropriately identified and controlled within the agreed process.
+
+## Assessment and serviceability
+
+Logistra is based in Patna, Bihar, India, with a focus on Eastern India. Facility and carrier availability, delivery timelines, order handoff methods, reporting, integrations, and service scope require confirmation for each proposed operating model.
 
 ## Website
 

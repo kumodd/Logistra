@@ -39,6 +39,10 @@ export default function ContactForm() {
         <label>Business name <input name="business" required placeholder="Your business" /></label>
       </div>
       <div className="form-row">
+        <label>Website or sales-channel URL <input name="website" type="url" placeholder="https://yourstore.com (optional)" /></label>
+        <label>Current inventory location <input name="inventoryLocation" placeholder="City or region (optional)" /></label>
+      </div>
+      <div className="form-row">
         <label>Email address <input name="email" type="email" required placeholder="you@business.com" /></label>
         <label>Phone number <input name="phone" type="tel" required placeholder="+91" /></label>
       </div>
@@ -50,6 +54,7 @@ export default function ContactForm() {
         <label>Selling channels <select name="channel" required defaultValue=""><option value="" disabled>Select a channel</option>{config.contact.channels.map((item) => <option key={item}>{item}</option>)}</select></label>
         <label>Product category <select name="category" required defaultValue=""><option value="" disabled>Select a category</option>{config.contact.categories.map((item) => <option key={item}>{item}</option>)}</select></label>
       </div>
+      <label>Target states, cities, or pincodes <input name="targetLocations" placeholder="Where are your customers? (optional)" /></label>
       <label>Tell us about your current setup <textarea name="message" placeholder="What is working, and where does fulfilment get difficult?" rows={4} /></label>
       <div className="form-submit-row">
         <button className="button button-dark" type="submit">Get my fulfilment assessment <span>↗</span></button>
