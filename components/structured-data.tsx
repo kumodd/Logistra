@@ -47,6 +47,19 @@ export default function StructuredData() {
         areaServed: { "@type": "Place", name: "Eastern India" },
         description: "Regional e-commerce fulfilment assessment and agreed receiving, storage, pick and pack, dispatch, and returns workflows for growing brands.",
       },
+      {
+        "@type": "FAQPage",
+        "@id": `${config.brand.url}/#faq`,
+        url: config.brand.url,
+        mainEntity: config.home.faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
     ],
   };
 
