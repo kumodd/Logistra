@@ -3,12 +3,12 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import StructuredData from "@/components/structured-data";
-import { defaultDescription, defaultKeywords, siteName, siteUrl } from "@/lib/seo";
+import { canonicalUrl, defaultDescription, defaultKeywords, defaultTitle, siteName, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Logistra — Faster delivery for growing D2C brands",
+    default: defaultTitle,
     template: `%s | ${siteName}`,
   },
   description: defaultDescription,
@@ -20,7 +20,12 @@ export const metadata: Metadata = {
   category: "E-commerce fulfilment",
   referrer: "origin-when-cross-origin",
   formatDetection: { email: true, address: false, telephone: true },
-  alternates: { canonical: siteUrl },
+  alternates: { canonical: canonicalUrl("/") },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [{ url: canonicalUrl("/icon"), type: "image/png" }],
+    apple: [{ url: canonicalUrl("/apple-icon"), type: "image/png", sizes: "180x180" }],
+  },
   robots: {
     index: true,
     follow: true,
@@ -35,17 +40,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteUrl,
+    url: canonicalUrl("/"),
     siteName,
-    title: "Logistra — Faster delivery for growing D2C brands",
+    title: defaultTitle,
     description: defaultDescription,
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Logistra — Faster delivery for growing D2C brands" }],
+    images: [{ url: canonicalUrl("/opengraph-image"), width: 1200, height: 630, alt: defaultTitle }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Logistra — Faster delivery for growing D2C brands",
+    title: defaultTitle,
     description: defaultDescription,
-    images: ["/opengraph-image"],
+    images: [canonicalUrl("/opengraph-image")],
   },
 };
 

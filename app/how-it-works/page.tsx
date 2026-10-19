@@ -8,9 +8,10 @@ import CtaBand from "@/components/cta-band";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "How E-commerce Fulfilment Works",
-  description: config.pages.howItWorks.body,
+  title: "How D2C Fulfilment Works",
+  description: "See how Logistra handles receiving, storage, picking, packing, dispatch, and returns for inventory positioned closer to D2C demand.",
   path: "/how-it-works",
+  keywords: ["e-commerce fulfilment workflow", "receiving storage pick and pack", "returns and RTO fulfilment"],
 });
 
 export default function HowItWorksPage() {

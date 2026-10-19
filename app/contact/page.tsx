@@ -7,8 +7,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Partner with Logistra",
-  description: config.contact.body,
+  description: "Discuss your D2C fulfilment requirements with Logistra, including inventory, order volumes, customer geography, serviceability, and commercials.",
   path: "/contact",
+  keywords: ["D2C fulfilment enquiry", "fulfilment cost assessment", "regional serviceability"],
 });
 
 export default function ContactPage() {

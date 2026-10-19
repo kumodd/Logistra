@@ -8,8 +8,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "E-commerce Fulfilment Services",
-  description: config.pages.services.body,
+  description: "Explore Logistra's e-commerce fulfilment services for D2C brands, including storage, pick and pack, dispatch, returns, RTO, and handling.",
   path: "/services",
+  keywords: ["e-commerce fulfilment services", "pick and pack fulfilment", "inventory storage and dispatch", "e-commerce returns management"],
 });
 
 export default function ServicesPage() {

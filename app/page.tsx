@@ -6,14 +6,16 @@ import WorkflowStrip from "@/components/workflow-strip";
 import CtaBand from "@/components/cta-band";
 import FaqList from "@/components/faq-list";
 import SharedFulfilmentDiagram from "@/components/shared-fulfilment-diagram";
+import { FaqStructuredData } from "@/components/structured-data";
 import { SectionHeading } from "@/components/page-intro";
 import DistanceMap from "@/components/distance-map";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Deliver Faster. Keep Your Customers.",
-  description: config.home.body,
+  title: "D2C Fulfilment in Eastern India",
+  description: "Regional fulfilment for D2C brands: Logistra positions best-selling inventory closer to customers in Eastern India for faster delivery and practical operations.",
   path: "/",
+  keywords: ["D2C fulfilment India", "regional fulfilment Eastern India", "shared fulfilment India", "e-commerce fulfilment Bihar"],
 });
 
 export default function HomePage() {
@@ -193,6 +195,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <FaqStructuredData items={config.home.faqs} />
       <CtaBand home />
     </>
   );

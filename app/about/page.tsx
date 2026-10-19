@@ -8,8 +8,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "About Logistra",
-  description: config.pages.about.body,
+  description: "Learn about Logistra, a Patna-based fulfilment partner helping brands assess shared infrastructure and regional delivery in Eastern India.",
   path: "/about",
+  keywords: ["Logistra Patna", "regional fulfilment Bihar", "Eastern India fulfilment"],
 });
 
 export default function AboutPage() {

@@ -8,8 +8,9 @@ import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Fulfilment Operations and Technology",
-  description: config.pages.technology.body,
+  description: "Understand Logistra's fulfilment operating model, order handoff, inventory records, reporting, and technology scope for regional operations.",
   path: "/technology",
+  keywords: ["fulfilment operations", "inventory visibility", "order handoff", "fulfilment technology"],
 });
 
 export default function TechnologyPage() {

@@ -17,8 +17,8 @@ export default function OpenGraphImage() {
         <div style={{ display: "flex", flexDirection: "column", fontSize: 76, lineHeight: 1.03, fontWeight: 700, letterSpacing: -4 }}>Deliver Faster.<br />Keep Your <span style={{ color: "#ed4b28" }}>Customers.</span></div>
       </div>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", fontSize: 18, color: "#5d6059" }}>
-        <span>Inventory positioning · Storage · Pick &amp; pack · Dispatch</span>
-        <span style={{ color: "#20221f" }}>logistra.in ↗</span>
+        <span>Inventory positioning - Storage - Pick &amp; pack - Dispatch</span>
+        <span style={{ color: "#20221f" }}>logistra.in</span>
       </div>
     </div>,
     { ...size },
