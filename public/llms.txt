@@ -1,3 +1,18 @@
 # Logistra
 
-See `/llm.txt` for the canonical machine-readable overview of Logistra, its fulfilment services, positioning, audience, site pages, contact details, and claim qualifications.
+> Regional fulfilment infrastructure for growing D2C brands positioning selected inventory closer to demand in Eastern India.
+
+Logistra is based in Patna, Bihar, India. It provides an assessment-led shared fulfilment model for D2C brands, marketplace sellers, and regional online businesses. Actual serviceability, order handoff, systems, costs, and operating responsibilities require confirmation.
+
+## Core pages
+
+- [Logistra homepage](https://www.logistra.in/): Overview of regional D2C fulfilment, inventory positioning, shared infrastructure, and the illustrative business case.
+- [How fulfilment works](https://www.logistra.in/how-it-works): Receiving, storage, picking, packing, dispatch, returns, and RTO workflow.
+- [Fulfilment services](https://www.logistra.in/services): Storage, pick and pack, dispatch, returns, and related agreed services.
+- [Technology and operations](https://www.logistra.in/technology): Order handoff, inventory records, reporting, and capabilities requiring confirmation.
+- [About Logistra](https://www.logistra.in/about): Company perspective and Patna, Bihar operating context.
+- [Partner enquiry](https://www.logistra.in/contact): Share products, order profile, customer geography, and fulfilment requirements.
+
+## Additional context
+
+- [Detailed Logistra overview](https://www.logistra.in/llm.txt): Services, audience, commercial qualifications, illustrative-claim disclosures, and contact information.

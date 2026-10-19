@@ -4,6 +4,22 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import StructuredData from "@/components/structured-data";
 import { canonicalUrl, defaultDescription, defaultKeywords, defaultTitle, siteName, siteUrl } from "@/lib/seo";
+import { DM_Mono, Manrope } from "next/font/google";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-manrope",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  preload: false,
+  variable: "--font-dm-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -56,7 +72,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${manrope.variable} ${dmMono.variable}`}>
       <body>
         <StructuredData />
         <Header />
