@@ -9,6 +9,7 @@ import SharedFulfilmentDiagram from "@/components/shared-fulfilment-diagram";
 import { FaqStructuredData } from "@/components/structured-data";
 import { SectionHeading } from "@/components/page-intro";
 import DistanceMap from "@/components/distance-map";
+import ShippingCalculator from "@/components/shipping-calculator";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -128,6 +129,8 @@ export default function HomePage() {
           <div className="comparison-closing"><span className="eyebrow eyebrow-light">A better delivery story</span><h2>{config.home.comparison.closingTitle}<br /><em>{config.home.comparison.closingEmphasis}</em></h2><p>{config.home.comparison.closingBody}</p><Link className="button button-light" href="/contact">{config.home.comparison.closingButton} <ArrowUpRight size={16} /></Link></div>
         </div>
       </section>
+
+      <ShippingCalculator />
 
       <section className="commercial-section section-padding">
         <div className="shell">
