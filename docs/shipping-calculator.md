@@ -108,6 +108,14 @@ Responses distinguish `available`, `unavailable`, and `not-configured` scenarios
 
 Shipping-only values are based on fields returned by Shiprocket's serviceability response. They are not delivery guarantees or final invoices. COD and additional charges are kept separate where returned. RTO charges are not allocated into a per-order total without a supplied return assumption.
 
+### Approximate pickup dates
+
+The serviceability response does not provide a documented, reliable scheduled pickup date. For eligible live courier rows, `lib/shipping/service.ts` therefore calculates an application-generated approximation with the pure helper in `lib/shipping/pickup-estimate.ts`.
+
+The estimate uses the courier's returned `cutoff_time` and a valid `suppression_dates.pickup_delay_from` / `pickup_delay_to` interval. It uses `Asia/Kolkata` by default, treats Saturday and Sunday as non-working days, accepts an optional configured holiday list through the helper's calendar configuration, and searches only within a bounded window. No holiday list is currently configured, and the estimate does not use `pickup_availability`, `seconds_left_for_pickup`, `pickup_supress_hours`, `suppress_date`, or `suppress_text` to manufacture a date because their serviceability semantics are not established here.
+
+Missing or malformed cutoff times, incomplete applicable delay ranges, and an exhausted search window return no estimate. The UI labels the result **Approx. pickup date** and states that actual pickup may differ. This does not create an order, generate an AWB, call the pickup-generation API, or schedule a pickup.
+
 Courier transit estimates begin after dispatch. Inventory must already be available at the relevant facility; replenishment, receiving, storage, and transfer time are separate commercial and operational considerations.
 
 ## Deployment

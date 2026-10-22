@@ -51,6 +51,7 @@ export function normalizeCourierRate(value: unknown): NormalizedCourierRate | nu
     ? null
     : rounded(freightCharge + (codCharges ?? 0) + (additionalCharges ?? 0));
   const estimatedDeliveryDays = firstNumber(item, ["estimated_delivery_days", "estimatedDeliveryDays"]);
+  const suppressionDates = record(item.suppression_dates);
 
   return {
     courierCompanyId: firstNumber(item, ["courier_company_id", "courierCompanyId", "id"]),
@@ -62,6 +63,12 @@ export function normalizeCourierRate(value: unknown): NormalizedCourierRate | nu
     estimatedDeliveryDays,
     etd: firstString(item, ["etd", "edd"]),
     pickupDate: firstString(item, ["pickup_date", "pickupDate", "pickup_datetime", "pickupDateTime"]),
+    cutoffTime: firstString(item, ["cutoff_time", "cutoffTime"]),
+    pickupDelayFrom: firstString(suppressionDates ?? {}, ["pickup_delay_from", "pickupDelayFrom"]),
+    pickupDelayTo: firstString(suppressionDates ?? {}, ["pickup_delay_to", "pickupDelayTo"]),
+    suppressDate: firstString(item, ["suppress_date", "suppressDate"]),
+    suppressText: firstString(item, ["suppress_text", "suppressText"]),
+    estimatedPickupDate: null,
     rating: firstNumber(item, ["rating"]),
     codAvailable: booleanFrom(item.cod),
     chargeWeightKg: firstNumber(item, ["charge_weight", "chargeWeight"]),

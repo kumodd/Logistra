@@ -1,4 +1,5 @@
 import type { ApprovedLogistraPricing, CostLine, GstTreatment, NormalizedCourierRate, OperationalCostInput, ScenarioCosts, ScenarioResult } from "./types";
+import { classifyDestinationRegion } from "./region.ts";
 
 function round(value: number): number {
   return Math.round(value * 100) / 100;
@@ -140,16 +141,29 @@ export function comparisonSummary(current: ScenarioResult, logistra: ScenarioRes
   const estimatedDaysDifference = current.bestCourier?.estimatedDeliveryDays !== null && current.bestCourier?.estimatedDeliveryDays !== undefined && logistra.bestCourier?.estimatedDeliveryDays !== null && logistra.bestCourier?.estimatedDeliveryDays !== undefined
     ? round(current.bestCourier.estimatedDeliveryDays - logistra.bestCourier.estimatedDeliveryDays)
     : null;
-  const winner = totalDifferencePerOrder === null
+  const destinationRegion = classifyDestinationRegion(current.destinationPincode);
+  const deliverySpeedPercentage = current.bestCourier?.estimatedDeliveryDays !== null && current.bestCourier?.estimatedDeliveryDays !== undefined && current.bestCourier.estimatedDeliveryDays > 0 && logistra.bestCourier?.estimatedDeliveryDays !== null && logistra.bestCourier?.estimatedDeliveryDays !== undefined
+    ? round(((current.bestCourier.estimatedDeliveryDays - logistra.bestCourier.estimatedDeliveryDays) / current.bestCourier.estimatedDeliveryDays) * 100)
+    : null;
+  const costDifference = totalDifferencePerOrder ?? shippingDifferencePerOrder;
+  const costWinner = costDifference === null
     ? null
-    : totalDifferencePerOrder > 0 ? "logistraFulfilment" : totalDifferencePerOrder < 0 ? "currentWarehouse" : "tie";
+    : costDifference > 0 ? "logistraFulfilment" : costDifference < 0 ? "currentWarehouse" : "tie";
+  const winner = estimatedDaysDifference !== null
+    ? estimatedDaysDifference >= 0 ? "logistraFulfilment" : "currentWarehouse"
+    : costWinner;
+  const winnerBasis = estimatedDaysDifference !== null ? "delivery" : costWinner !== null ? "cost" : null;
 
   const status = totalDifferencePerOrder !== null ? "complete" : shippingDifferencePerOrder !== null || estimatedDaysDifference !== null ? "partial" : "unavailable";
-  const message = status === "complete"
-    ? "Total comparison is based on returned carrier quotes and the configured or supplied cost inputs."
+  const message = winnerBasis === "delivery" && winner === "logistraFulfilment"
+    ? "Based on the returned delivery estimates, Logistra is faster or matches the central warehouse. Cost figures remain visible for commercial review."
+    : winnerBasis === "delivery"
+      ? "The central warehouse is faster in this result because the Logistra delivery estimate is longer."
+      : status === "complete"
+        ? "No delivery estimate was available, so the winner is based on the returned carrier quotes and configured or supplied cost inputs."
     : status === "partial"
       ? "Shipping or delivery indicators are available, but a complete fulfilment-cost comparison needs the missing cost inputs shown below."
       : "A comparable result is not available until both scenarios return usable data.";
 
-  return { status, shippingDifferencePerOrder, totalDifferencePerOrder, monthlyDifference, estimatedDaysDifference, winner, message } as const;
+  return { status, shippingDifferencePerOrder, totalDifferencePerOrder, monthlyDifference, estimatedDaysDifference, deliverySpeedPercentage, destinationRegion, winner, winnerBasis, message } as const;
 }

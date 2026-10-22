@@ -298,6 +298,8 @@ em { color: var(--orange-text); font-style: normal; }
 .calculator-courier-name small, .calculator-courier-delivery-field small { display: block; margin-top: 4px; color: var(--ink-soft); font-family: var(--mono); font-size: 8px; }
 .calculator-courier-pickup-field strong, .calculator-courier-delivery-field strong { display: block; margin-top: 4px; overflow-wrap: anywhere; color: var(--ink); font-family: var(--sans); font-size: 10px; font-weight: 600; line-height: 1.2; }
 .calculator-courier-price { text-align: right; }
+.calculator-pickup-disclaimer { margin: 13px 0 0; color: var(--ink-soft); font-size: 9px; line-height: 1.45; }
+.calculator-scenario-logistraFulfilment .calculator-pickup-disclaimer { color: #9fa29b; }
 .calculator-scenario-logistraFulfilment .calculator-subhead, .calculator-scenario-logistraFulfilment .calculator-courier-row, .calculator-scenario-logistraFulfilment .calculator-cost-row, .calculator-scenario-logistraFulfilment .calculator-total-row { border-color: #474b44; color: #d6d7d0; }
 .calculator-scenario-logistraFulfilment .calculator-subhead, .calculator-scenario-logistraFulfilment .calculator-courier-count, .calculator-scenario-logistraFulment .calculator-courier-name small, .calculator-scenario-logistraFulfilment .calculator-courier-delivery-field small { color: #9fa29b; }
 .calculator-scenario-logistraFulfilment .calculator-courier-name strong, .calculator-scenario-logistraFulfilment .calculator-courier-pickup-field strong, .calculator-scenario-logistraFulfilment .calculator-courier-delivery-field strong { color: var(--paper); }
@@ -312,15 +314,34 @@ em { color: var(--orange-text); font-style: normal; }
 .calculator-footnote { margin: 17px 0 0; color: var(--ink-soft); font-size: 10px; line-height: 1.5; }
 .calculator-scenario-logistraFulfilment .calculator-footnote { color: #9fa29b; }
 .calculator-summary { margin-top: 15px; padding: 28px; background: var(--orange-dark); color: white; }
+.calculator-summary-logistraFulfilment { background: #205f3f; }
+.calculator-summary-logistraFulfilment .calculator-winner { border-color: #a9e0b8; background: rgba(0,0,0,.14); }
+.calculator-summary-logistraFulfilment .calculator-winner p, .calculator-summary-logistraFulfilment .calculator-winner-signal span, .calculator-summary-logistraFulfilment .calculator-summary-grid span, .calculator-summary-logistraFulfilment .calculator-summary-grid small, .calculator-summary-logistraFulfilment .calculator-summary-note, .calculator-summary-logistraFulfilment .calculator-quote-time { color: #d8f4df !important; }
+.calculator-summary-logistraFulfilment .calculator-summary-grid > div { background: #205f3f; }
 .calculator-summary-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 25px; }
 .calculator-summary .eyebrow { color: white; }
 .calculator-summary h3 { max-width: 700px; margin: 13px 0 0; color: white; font-size: clamp(23px, 2.8vw, 37px); letter-spacing: -.05em; line-height: 1; }
 .calculator-summary > p { max-width: 670px; margin: 18px 0 0; color: white; font-size: 13px; line-height: 1.6; }
 .calculator-quote-time { color: #ffe2da; font-family: var(--mono); font-size: 9px; line-height: 1.4; text-align: right; }
-.calculator-summary-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin: 27px 0; background: rgba(255,255,255,.35); }
+.calculator-winner { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(210px, .75fr); gap: 24px; align-items: center; margin-top: 27px; padding: 20px; border: 1px solid rgba(255,255,255,.5); background: rgba(0,0,0,.14); }
+.calculator-winner > div:first-child > strong { display: block; margin-top: 10px; color: white; font-size: clamp(24px, 3vw, 42px); letter-spacing: -.06em; line-height: .95; }
+.calculator-winner p { max-width: 650px; margin: 12px 0 0; color: #ffe2da; font-size: 12px; line-height: 1.55; }
+.calculator-winner-signal { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.45); }
+.calculator-winner-signal span { display: block; color: #ffe2da; font-family: var(--mono); font-size: 8px; letter-spacing: .06em; line-height: 1.35; text-transform: uppercase; }
+.calculator-winner-signal strong { display: block; margin-top: 10px; color: white; font-size: clamp(25px, 3vw, 40px); letter-spacing: -.06em; line-height: 1; }
+.calculator-winner-currentWarehouse { border-color: #f4b0a0; }
+.calculator-winner-currentWarehouse .calculator-winner-signal strong { color: #ffe2da; }
+.calculator-winner-tie, .calculator-winner-pending { border-color: rgba(255,255,255,.35); }
+.calculator-routing-recommendation { margin-top: 15px; padding: 17px 18px; border-left: 3px solid #ffd2c7; background: rgba(0,0,0,.14); }
+.calculator-routing-recommendation .eyebrow { display: block; }
+.calculator-routing-recommendation strong { display: block; margin-top: 9px; color: white; font-size: 17px; letter-spacing: -.03em; line-height: 1.15; }
+.calculator-routing-recommendation p { max-width: 760px; margin: 9px 0 0; color: #ffe2da; font-size: 11px; line-height: 1.55; }
+.calculator-summary-logistraFulfilment .calculator-routing-recommendation { border-color: #ffd2c7; }
+.calculator-summary-logistraFulfilment .calculator-routing-recommendation p { color: #d8f4df; }
+.calculator-summary-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; margin: 27px 0; background: rgba(255,255,255,.35); }
 .calculator-summary-grid > div { min-height: 128px; padding: 17px; background: var(--orange-dark); }
 .calculator-summary-grid span { display: block; color: #ffe2da; font-family: var(--mono); font-size: 8px; letter-spacing: .06em; line-height: 1.35; text-transform: uppercase; }
-.calculator-summary-grid strong { display: block; margin-top: 25px; color: white; font-size: 22px; letter-spacing: -.06em; line-height: 1; }
+.calculator-summary-grid strong { display: block; margin-top: 22px; color: white; font-size: 18px; letter-spacing: -.04em; line-height: 1.08; }
 .calculator-summary-grid small { display: block; margin-top: 9px; color: #ffe2da; font-size: 9px; line-height: 1.35; }
 .calculator-summary-note { color: #ffe2da !important; font-size: 11px !important; }
 .calculator-summary .button-light { margin-top: 19px; }
@@ -330,6 +351,8 @@ em { color: var(--orange-text); font-style: normal; }
   .calculator-disclaimer { max-width: 520px !important; }
   .calculator-fields-three { grid-template-columns: repeat(2, 1fr); }
   .calculator-scenarios { gap: 10px; }
+  .calculator-winner { grid-template-columns: 1fr; gap: 20px; }
+  .calculator-winner-signal { padding-top: 18px; padding-left: 0; border-top: 1px solid rgba(255,255,255,.45); border-left: 0; }
   .calculator-summary-grid { grid-template-columns: repeat(2, 1fr); }
 }
 

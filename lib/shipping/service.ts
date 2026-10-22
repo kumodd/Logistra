@@ -1,6 +1,7 @@
 import { getApprovedLogistraPricing, getLogistraFacility, getStandardEstimateOriginPincode, hasShiprocketCredentials, hasStandardRateEstimates } from "./config";
 import { comparisonSummary, buildScenarioCosts } from "./calculations";
 import { normalizeCourierRates, chooseBestCourier } from "./normalize";
+import { estimatePickupDate } from "./pickup-estimate";
 import { ShiprocketError, fetchServiceability } from "./shiprocket";
 import { buildStandardCourierEstimate } from "./standard";
 import type { ComparisonRequest, ComparisonResponse, ScenarioResult, ShippingRateRequest, ShippingRateResponse } from "./types";
@@ -43,7 +44,10 @@ async function lookupScenario(
   options: { costs?: ComparisonRequest["currentWarehouse"]["costs"]; monthlyOrderVolume?: number; logistraPricing?: ReturnType<typeof getApprovedLogistraPricing> },
 ): Promise<ScenarioResult> {
   const lookup = await fetchServiceability(request);
-  const couriers = normalizeCourierRates(lookup.payload);
+  const couriers = normalizeCourierRates(lookup.payload).map((courier) => ({
+    ...courier,
+    estimatedPickupDate: estimatePickupDate(courier, lookup.quoteTimestamp),
+  }));
   const bestCourier = chooseBestCourier(couriers);
   const costs = buildScenarioCosts({
     bestCourier,
@@ -54,6 +58,7 @@ async function lookupScenario(
   });
   const notes: string[] = ["Rates are from the configured Shiprocket account for this pickup and destination PIN code."];
   if (id === "logistraFulfilment") notes.push("This does not by itself represent a separate Logistra carrier contract or negotiated fulfilment rate.");
+  if (couriers.length > 0) notes.push("Approximate pickup dates are calculated by Logistra from the returned courier cutoff and pickup-delay information. They are not scheduled Shiprocket pickup dates; actual pickup may differ.");
   if (bestCourier && bestCourier.totalCharge === null) notes.push("The provider did not return enough charge fields for a comparable total on the selected courier.");
 
   return {

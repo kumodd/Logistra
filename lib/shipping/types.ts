@@ -51,6 +51,12 @@ export type NormalizedCourierRate = {
   estimatedDeliveryDays: number | null;
   etd: string | null;
   pickupDate: string | null;
+  cutoffTime: string | null;
+  pickupDelayFrom: string | null;
+  pickupDelayTo: string | null;
+  suppressDate: string | null;
+  suppressText: string | null;
+  estimatedPickupDate: string | null;
   rating: number | null;
   codAvailable: boolean | null;
   chargeWeightKg: number | null;
@@ -101,7 +107,10 @@ export type ComparisonSummary = {
   totalDifferencePerOrder: number | null;
   monthlyDifference: number | null;
   estimatedDaysDifference: number | null;
+  deliverySpeedPercentage: number | null;
+  destinationRegion: "easternIndia" | "outsideEasternIndia" | "unknown";
   winner: "currentWarehouse" | "logistraFulfilment" | "tie" | null;
+  winnerBasis: "delivery" | "cost" | null;
   message: string;
 };
 

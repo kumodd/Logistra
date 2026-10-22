@@ -2,7 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 import { ArrowRight, ArrowUpRight } from "./icons";
-import type { ComparisonResponse, CostLine, ScenarioResult } from "@/lib/shipping/types";
+import { formatPickupEstimate } from "@/lib/shipping/pickup-estimate";
+import type { ComparisonResponse, CostLine, NormalizedCourierRate, ScenarioResult } from "@/lib/shipping/types";
 
 type FormValues = {
   currentPincode: string;
@@ -71,8 +72,32 @@ function formatProviderDate(value: string | null): string {
   return new Intl.DateTimeFormat("en-IN", { day: "2-digit", month: "short", year: "numeric", timeZone: "Asia/Kolkata" }).format(parsed);
 }
 
+function pickupEstimateLabel(courier: NormalizedCourierRate): string {
+  return formatPickupEstimate(courier.estimatedPickupDate);
+}
+
 function ratingLabel(value: number | null): string {
   return value === null ? "Not available" : `${value.toFixed(1)} / 5`;
+}
+
+function percentageLabel(value: number | null): string {
+  if (value === null) return "Unavailable";
+  if (value === 0) return "Same speed";
+  const amount = Math.abs(value) % 1 === 0 ? Math.abs(value).toFixed(0) : Math.abs(value).toFixed(1);
+  return `${amount}% ${value > 0 ? "faster" : "slower"} with Logistra`;
+}
+
+function deliveryDifferenceLabel(value: number | null): string {
+  if (value === null) return "Unavailable";
+  if (value === 0) return "Same delivery time";
+  const days = Math.abs(value);
+  return `${days} day${days === 1 ? "" : "s"} ${value > 0 ? "earlier" : "later"} with Logistra`;
+}
+
+function costDifferenceLabel(value: number | null): string {
+  if (value === null) return "Unavailable";
+  if (value === 0) return "Same cost";
+  return `${rupees(Math.abs(value))} ${value > 0 ? "lower" : "higher"} with Logistra`;
 }
 
 function fieldError(values: FormValues, key: keyof FormValues): string | undefined {
@@ -116,7 +141,7 @@ function ScenarioCard({ scenario }: { scenario: ScenarioResult }) {
             {scenario.bestCourier ? <div className="calculator-best-rate-grid">
               <div><span>Courier</span><strong>{scenario.bestCourier.courierName}</strong></div>
               <div><span>Rating</span><strong>{ratingLabel(scenario.bestCourier.rating)}</strong></div>
-              <div><span>Pickup date</span><strong>{formatProviderDate(scenario.bestCourier.pickupDate)}</strong></div>
+              <div><span>Pickup by</span><strong>{pickupEstimateLabel(scenario.bestCourier)}</strong></div>
               <div><span>Estimated delivery</span><strong>{formatProviderDate(scenario.bestCourier.etd)}</strong><small>{valueOrUnavailable(scenario.bestCourier.estimatedDeliveryDays, " days")}</small></div>
             </div> : <p>No courier with a usable charge</p>}
           </div>
@@ -125,11 +150,12 @@ function ScenarioCard({ scenario }: { scenario: ScenarioResult }) {
             <div className="calculator-courier-options" role="list">
               {scenario.couriers.map((courier, index) => <div className="calculator-courier-row" role="listitem" key={`${courier.courierCompanyId ?? "unknown"}-${courier.courierName}-${index}`}>
                 <div className="calculator-courier-name"><strong>{courier.courierName}</strong><small>Rating {ratingLabel(courier.rating)}</small></div>
-                <div className="calculator-courier-pickup-field"><span>Pickup</span><strong>{formatProviderDate(courier.pickupDate)}</strong></div>
+                <div className="calculator-courier-pickup-field"><span>Pickup by</span><strong>{pickupEstimateLabel(courier)}</strong></div>
                 <div className="calculator-courier-delivery-field"><span>Estimated delivery</span><strong>{formatProviderDate(courier.etd)}</strong><small>{valueOrUnavailable(courier.estimatedDeliveryDays, " days")}</small></div>
                 <strong className="calculator-courier-price">{rupees(courier.totalCharge)}</strong>
               </div>)}
             </div>
+            <p className="calculator-pickup-disclaimer">Pickup date is estimated from courier cutoff and available delay information. Actual pickup may differ.</p>
           </div>
         </>
       )}
@@ -150,17 +176,43 @@ function ScenarioCard({ scenario }: { scenario: ScenarioResult }) {
 
 function ComparisonSummary({ response }: { response: ComparisonResponse }) {
   const comparison = response.comparison;
+  const winnerTitle = comparison.winner === "logistraFulfilment"
+    ? "Logistra wins this comparison"
+    : comparison.winner === "currentWarehouse"
+      ? "Central warehouse wins this comparison"
+      : comparison.winner === "tie"
+        ? "The comparison is tied"
+        : "No clear winner yet";
+  const winnerReason = comparison.winnerBasis === "delivery"
+    ? comparison.winner === "logistraFulfilment"
+      ? comparison.estimatedDaysDifference === 0 ? "Logistra matches the central warehouse delivery estimate, with the delivery result treated as the deciding signal." : "Logistra reaches the customer sooner in the returned estimate, even when its cost is the same or higher."
+      : "The Logistra delivery estimate is longer here; that is the only factor working against Logistra in this comparison."
+    : "Delivery timing was unavailable, so the available cost data determines the result.";
+  const outsideEasternIndia = comparison.destinationRegion === "outsideEasternIndia";
+  const routingRecommendation = outsideEasternIndia && comparison.winner === "currentWarehouse"
+    ? "This destination is outside Logistra’s Eastern India focus, and the central warehouse is faster in this quote. Serve this area from your central warehouse for the better delivery outcome."
+    : outsideEasternIndia && comparison.winner === "logistraFulfilment"
+      ? "This destination is outside Logistra’s Eastern India focus. The current quote is faster with Logistra, but confirm the regional operating model before moving inventory."
+      : outsideEasternIndia
+        ? "This destination is outside Logistra’s Eastern India focus. Keep fulfilment with your central warehouse unless a regional case is validated."
+        : null;
   return (
-    <section className="calculator-summary" aria-live="polite">
-      <div className="calculator-summary-head"><div><span className="eyebrow">Comparison summary</span><h3>{comparison.status === "complete" ? "A cost comparison you can inspect." : "The useful parts are visible. The rest needs confirmed inputs."}</h3></div><span className="calculator-quote-time">Quoted {new Date(response.quoteTimestamp).toLocaleString("en-IN")}</span></div>
+    <section className={`calculator-summary calculator-summary-${comparison.winner ?? "pending"}`} aria-live="polite">
+      <div className="calculator-summary-head"><div><span className="eyebrow">Comparison summary</span><h3>Delivery first. Commercial context alongside it.</h3></div><span className="calculator-quote-time">Quoted {new Date(response.quoteTimestamp).toLocaleString("en-IN")}</span></div>
+      <div className={`calculator-winner calculator-winner-${comparison.winner ?? "pending"}`}>
+        <div><span className="eyebrow">Result</span><strong>{winnerTitle}</strong><p>{winnerReason}</p></div>
+        <div className="calculator-winner-signal"><span>Delivery speed vs central warehouse</span><strong>{percentageLabel(comparison.deliverySpeedPercentage)}</strong></div>
+      </div>
+      {routingRecommendation && <div className="calculator-routing-recommendation"><span className="eyebrow">Regional routing recommendation</span><strong>{comparison.winner === "currentWarehouse" ? "Serve this area from your central warehouse." : "Review the regional operating fit before moving inventory."}</strong><p>{routingRecommendation}</p></div>}
       <p>{comparison.message}</p>
       <div className="calculator-summary-grid">
-        <div><span>Shipping difference / order</span><strong>{rupees(comparison.shippingDifferencePerOrder)}</strong><small>Current warehouse minus Logistra</small></div>
-        <div><span>Estimated delivery difference</span><strong>{valueOrUnavailable(comparison.estimatedDaysDifference, " days")}</strong><small>Positive means the Logistra estimate is shorter</small></div>
-        <div><span>Fully loaded difference / order</span><strong>{rupees(comparison.totalDifferencePerOrder)}</strong><small>Shown only when both totals are comparable</small></div>
-        <div><span>Estimated monthly difference</span><strong>{rupees(comparison.monthlyDifference)}</strong><small>Requires monthly volume and complete costs</small></div>
+        <div><span>Delivery speed</span><strong>{percentageLabel(comparison.deliverySpeedPercentage)}</strong><small>Relative to central warehouse delivery time</small></div>
+        <div><span>Delivery timing</span><strong>{deliveryDifferenceLabel(comparison.estimatedDaysDifference)}</strong><small>Based on returned delivery-day estimates</small></div>
+        <div><span>Shipping cost / order</span><strong>{costDifferenceLabel(comparison.shippingDifferencePerOrder)}</strong><small>Shiprocket quote comparison</small></div>
+        <div><span>Fully loaded cost / order</span><strong>{costDifferenceLabel(comparison.totalDifferencePerOrder)}</strong><small>Shown when all required inputs are available</small></div>
+        <div><span>Estimated monthly cost</span><strong>{costDifferenceLabel(comparison.monthlyDifference)}</strong><small>Based on supplied monthly order volume</small></div>
       </div>
-      <p className="calculator-summary-note">A positive cost difference means the Logistra figure is lower; a negative figure means the current warehouse figure is lower. No winner is shown when the underlying data is incomplete.</p>
+      <p className="calculator-summary-note">When both delivery estimates are available, a faster or equal Logistra delivery wins the comparison. Costs remain visible so you can review the complete commercial picture.</p>
       <a className="button button-dark" href="/contact">Discuss the operating model <ArrowUpRight size={16} /></a>
     </section>
   );
